@@ -75,7 +75,7 @@ void nhanma()
       }
       
       //--------------------------------------------------------------------------------------------------------------------- 
-      else if(step == 1) // bit 1 cÛ tong do dai xung thap va cao < 1500us, bit 0 cÛ tong do dai xung thap va cao > 1500us
+      else if(step == 1) // bit 1 c√≥ tong do dai xung thap va cao < 1500us, bit 0 c√≥ tong do dai xung thap va cao > 1500us
       {
          output_high(led);
          
@@ -89,7 +89,7 @@ void nhanma()
          }
          while(input(DATA_INFR) == 1)
          {
-            if(dem1 > 20) // bit stop cÛ xung cao > 2000 us
+            if(dem1 > 20) // bit stop c√≥ xung cao > 2000 us
             {
                step = 2;
                break;
@@ -196,7 +196,7 @@ void main()
    set_tris_a (0b11001101); // 0 la output, 1 la input
    setup_comparator (NC_NC_NC_NC); // tat so sanh
    setup_adc_ports (NO_ANALOGS); // tat dau vao tuong tu
-   setup_adc (ADC_OFF); // vÙ hieu hÛa A2D
+   setup_adc (ADC_OFF); // v√¥ hieu h√≥a A2D
    port_a_pullups(0b00000101); // dien tro noi keo len, 1 la bat, 0 la tat
    output_low(led);
    output_low(led1);
@@ -208,7 +208,7 @@ void main()
    
    while(TRUE)
    {
-      key = scan_BT();  // quÈt b‡n phÌm
+      key = scan_BT();  // qu√©t b√†n ph√≠m
       if(input(DATA_INFR) == 0)
       {
          enable_interrupts(INT_TIMER1); // cho phep ngat timer1
